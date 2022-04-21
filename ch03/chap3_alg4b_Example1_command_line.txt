@@ -1,0 +1,25 @@
+## for BAT Example 1 alone (first program) ##
+## using gfortran in Linux terminal.       ##
+
+# debugging build command line:
+gfortran -o Prog_BAT_Example1.out -O0 -Wall chap3_alg1_Mod_NumPrec_types.f90 chap3_alg8_Mod_MINPACK.f90 chap3_alg2_Mod_BAT_model.f90 chap3_alg3_BAT_Example_1.f90 chap3_alg4a_Prog_BAT_Example1.f90
+
+# release build command line:
+gfortran -o Prog_BAT_Example1.out -O3 chap3_alg1_Mod_NumPrec_types.f90 chap3_alg8_Mod_MINPACK.f90 chap3_alg2_Mod_BAT_model.f90 chap3_alg3_BAT_Example_1.f90 chap3_alg4a_Prog_BAT_Example1.f90
+
+# release build command line with linking to Dislin for plotting:
+gfortran -o Prog_BAT_Example1.out -O3 chap3_alg1_Mod_NumPrec_types.f90 chap3_alg8_Mod_MINPACK.f90 chap3_alg2_Mod_BAT_model.f90 chap3_alg3_BAT_Example_1.f90 chap3_alg4a_Prog_BAT_Example1.f90  -ldislin_d -I/usr/local/dislin/gf/real64
+
+# release build command line with linking to Dislin for plotting and including Mod_Dislin_plots:
+gfortran -o Prog_BAT_Example1.out -O3 chap3_alg1_Mod_NumPrec_types.f90 chap3_alg8_Mod_MINPACK.f90 chap3_alg2_Mod_BAT_model.f90 chap3_alg5_Mod_Dislin_plots.f90 chap3_alg3_BAT_Example_1.f90 chap3_alg4a_Prog_BAT_Example1.f90  -ldislin_d -I/usr/local/dislin/gf/real64
+
+
+## using Intel oneAPI's "ifort" (classic) compiler on Windows:
+## 1.) open a dedicated "Intel oneApi command prompt for Intel 64 Visual Studio"
+##     (e.g. type Intel oneAPI into the Windows search box to find the the special command prompt)
+## 2.) navigate to your local source code directory
+## 3.) execute the below command line (version including Dislin library for plots)
+
+ifort /o Prog_BAT_Example1.exe /O3 chap3_alg1_Mod_NumPrec_types.f90 chap3_alg8_Mod_MINPACK.f90 chap3_alg2_Mod_BAT_model.f90 chap3_alg5_Mod_Dislin_plots.f90 chap3_alg3_BAT_Example_1.f90 chap3_alg4a_Prog_BAT_Example1.f90  /I"c:\dislin\ifc\real64" c:\dislin\disifl_d.lib c:\dislin\disifd_d.lib user32.lib gdi32.lib
+
+## (or analogous to ifort command line when using Intel oneAPI's "ifx" LLVM compiler)

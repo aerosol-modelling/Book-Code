@@ -1,0 +1,28 @@
+## Example 2 -- consideration of LLPS ##
+number of BAT_light calls in step (2.3): 15
+
+set tolerance for local_min:  1.00000E-04
+found local min  of activity curve at x_org_min(1) =  8.519337E-02, flocmin =  9.624295E-01
+number of BAT_light calls during  local min search = 7
+
+found local min  of activity curve at x_org_min(2) =  4.592518E-01, flocmin =  6.518775E-01
+number of BAT_light calls during  local min search = 7
+
+approx x_org of p1  point is:  6.78571E-01
+
+determined x_org of p1  point is:  6.68032E-01
+relative deviation from targeted  activity:  1.33058E-08
+number of BAT_light calls during  Ridders_zero = 3
+
+approx x_org of p2  point is:  3.57143E-02
+
+determined x_org of p2  point is:  2.24158E-02
+relative deviation from targeted  activity:  3.17415E-11
+number of BAT_light calls during  Ridders_zero = 5
+
+initial guess for xA_org, xB_org =  2.241582E-02  6.680316E-01
+
+number of BAT_light calls during LLE calc.: 16
+after hybrd1 solver; info = 1
+after hybrd1 solver; fvec =  1.209536E-09  3.142757E-09
+after hybrd1 solver; xA_org, xB_org =  2.591991E-02  6.572402E-01

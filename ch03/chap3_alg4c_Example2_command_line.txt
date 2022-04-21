@@ -1,0 +1,26 @@
+## for BAT Example 2 (or Example 1)    ##
+
+## In file chap3_alg4_Prog_BAT_Examples.f90, set example_no = 2 
+## to select example 2 during the program execution
+
+
+## using gfortran in a Linux terminal.
+## 1.) navigate to your local source code directory
+## 2.) execute the below command line
+
+gfortran -o Prog_BAT.out -O3  chap3_alg1_Mod_NumPrec_types.f90 chap3_alg7_Mod_NumMethods.f90 chap3_alg8_Mod_MINPACK.f90 chap3_alg2_Mod_BAT_model.f90 chap3_alg5_Mod_Dislin_plots.f90 chap3_alg3_BAT_Example_1.f90 chap3_alg6_BAT_Example_2.f90 chap3_alg4_Prog_BAT_Examples.f90  -ldislin_d -I/usr/local/dislin/gf/real64
+
+
+
+## using Intel oneAPI's "ifort" (classic) compiler on Windows:
+## 1.) open a dedicated "Intel oneApi command prompt for Intel 64 Visual Studio"
+## 2.) navigate to your local source code directory
+## 3.) execute the below command line
+
+ifort /o Prog_BAT.exe /O3  chap3_alg1_Mod_NumPrec_types.f90 chap3_alg7_Mod_NumMethods.f90 chap3_alg8_Mod_MINPACK.f90 chap3_alg2_Mod_BAT_model.f90 chap3_alg5_Mod_Dislin_plots.f90 chap3_alg3_BAT_Example_1.f90 chap3_alg6_BAT_Example_2.f90 chap3_alg4_Prog_BAT_Examples.f90  /I"c:\dislin\ifc\real64" c:\dislin\disifl_d.lib c:\dislin\disifd_d.lib user32.lib gdi32.lib
+
+
+## or using Intel oneAPI's "ifx" LLVM compiler on Windows:
+## 3.) execute the below command line
+
+ifx /o Prog_BAT.exe /O3  chap3_alg1_Mod_NumPrec_types.f90 chap3_alg7_Mod_NumMethods.f90 chap3_alg8_Mod_MINPACK.f90 chap3_alg2_Mod_BAT_model.f90 chap3_alg5_Mod_Dislin_plots.f90 chap3_alg3_BAT_Example_1.f90 chap3_alg6_BAT_Example_2.f90 chap3_alg4_Prog_BAT_Examples.f90  /I"c:\dislin\ifc\real64" c:\dislin\disifl_d.lib c:\dislin\disifd_d.lib user32.lib gdi32.lib

@@ -1,0 +1,24 @@
+## for AIOMFAC-LLE Example program ##
+
+## using gfortran in a Linux terminal.
+## 1.) navigate to your local source code directory
+## 2.) execute the below command line (it may take a while to complete)
+## version including dislin library for plots:
+
+gfortran -o Prog_AIOMFAC-LLE.out -O3 -ffree-line-length-none Mod_NumPrec.f90 ModTransformations.f90 zerobracket_inwards.f90 ridderzero.f90 brent.f90 ModSystemProp.f90 ModAIOMFACvar.f90 ModMRpart.f90 ModCompScaleConversion.f90 Mod_MINPACK.f90 ModSubgroupProp.f90 Mod_Dislin_plots.f90 Mod_InputOutput.f90 ModPhaseSep.f90 ModComponentNames.f90 SubModinitGuessesLLE.f90 SubModLLEsolver.f90 Mod_PureViscosPar.f90 ModSRunifac.f90 SubModDefSystem.f90 ModCalcActCoeff.f90 SubModPhaseSeparation.f90 SubModGibbsEnergyLiq.f90 AIOMFAC_LLE_inout.f90 Main_AIOMFAC_LLE_prog.f90  -ldislin_d -I/usr/local/dislin/gf/real64
+
+
+## using Intel oneAPI's "ifort" (classic) compiler on Windows:
+## 1.) open a dedicated "Intel oneApi command prompt for Intel 64 Visual Studio"
+## 2.) navigate to your local source code directory
+## 3.) execute the below command line (it may take a while to complete)
+## version including dislin library for plots:
+
+ifort /o Prog_AIOMFAC-LLE.exe /O3  Mod_NumPrec.f90 ModTransformations.f90 zerobracket_inwards.f90 ridderzero.f90 brent.f90 ModSystemProp.f90 ModAIOMFACvar.f90 ModMRpart.f90 ModCompScaleConversion.f90 Mod_MINPACK.f90 ModSubgroupProp.f90 Mod_Dislin_plots.f90 Mod_InputOutput.f90 ModPhaseSep.f90 ModComponentNames.f90 SubModinitGuessesLLE.f90 SubModLLEsolver.f90 Mod_PureViscosPar.f90 ModSRunifac.f90 SubModDefSystem.f90 ModCalcActCoeff.f90 SubModPhaseSeparation.f90 SubModGibbsEnergyLiq.f90 AIOMFAC_LLE_inout.f90 Main_AIOMFAC_LLE_prog.f90  /I"c:\dislin\ifc\real64" c:\dislin\disifl_d.lib c:\dislin\disifd_d.lib user32.lib gdi32.lib
+
+
+## similar for Intel oneApi's LLVM ifx compiler (replace ifort by ifx in above command)
+
+
+## to run the program from a Linux command prompt type (or similar for Windows case):
+./Prog_AIOMFAC-LLE.out ../Inputfiles/input_0404.txt

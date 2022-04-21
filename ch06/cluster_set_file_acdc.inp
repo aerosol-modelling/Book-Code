@@ -1,0 +1,19 @@
+#                           sulfuric_acid   ammonia
+name:                       A               N
+charge:                     0               0
+mass [g/mol]:               98.08           17.04
+density [kg/m^3]:           1830.0          696.0
+base strength:              -1              1
+acid strength:              1               -1
+######################################################
+# Pure acid clusters:
+                            1-2             0
+# Acid-ammonia clusters:
+                            0-3             1
+                            2-4             2
+                            3-5             3
+                            4-5             4
+                            4-5             5
+######################################################
+# Criteria for growing out of the simulation:
+out neutral                 6               5
